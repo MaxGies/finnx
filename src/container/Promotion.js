@@ -1,7 +1,9 @@
 import Slider from "../components/Slider";
 import Package from "../components/Package";
+import { useState } from "react";
 
 const Promotion = () => {
+  const [employeeAmount, setEmployeeAmount] = useState("30");
   return (
     <section className="flex flex-col items-center gap-[40px] w-full px-5 lg:max-w-[940px] lg:px-0">
       <div className="flex flex-col items-center">
@@ -21,7 +23,7 @@ const Promotion = () => {
             ระบุจำนวนพนักงานในบริษัท
           </p>
         </div>
-        <Slider />
+        <Slider outSetEmployeeAmount={setEmployeeAmount} />
         <div className="flex gap-2.5 w-full max-w-[335px]">
           <div className="font-semibold text-base text-white-rabbit w-[30px] h-[30px] bg-bubblegum rounded-full flex items-center justify-center">
             2
@@ -30,7 +32,7 @@ const Promotion = () => {
             เลือกแผนบริการตามความต้องการ
           </p>
         </div>
-        <Package />
+        <Package recieveEmployee={employeeAmount} />
       </div>
     </section>
   );

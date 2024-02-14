@@ -8,14 +8,14 @@ import { useState } from "react";
 const packageType = [
   {
     name: "Cone",
-    price: 590,
+    price: 29,
     originalPrice: 350,
     img: ConeImg,
     smallDisplayOrder: 2,
   },
   {
     name: "Sundae",
-    price: 590,
+    price: 59,
     originalPrice: 690,
     img: SundaeImg,
     smallDisplayOrder: 1,
@@ -23,15 +23,16 @@ const packageType = [
   },
   {
     name: "Quart",
-    price: 890,
+    price: 89,
     originalPrice: 1090,
     img: QuartImg,
     smallDisplayOrder: 3,
   },
 ];
 
-const Package = () => {
+const Package = ({ recieveEmployee }) => {
   const [packSelect, setPackSelect] = useState("Sundae");
+
   return (
     <div className="w-full flex flex-col lg:flex-row gap-5 lg:gap-[33px] justify-center items-center lg:max-w-[940px]">
       {packageType.map((pack, index) => {
@@ -63,7 +64,7 @@ const Package = () => {
                 <p className="font-bold text-2xl text-sherbet">{pack.name}</p>
               </div>
               <p className="font-bold text-2xl text-avocado">
-                {pack.price} บาท/เดือน{" "}
+                {pack.price * recieveEmployee} บาท/เดือน{" "}
                 <span className="text-black-panther text-base font-semibold line-through decoration-2">
                   {pack.originalPrice} บาท
                 </span>

@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 
-const Slider = () => {
+const Slider = ({ outSetEmployeeAmount }) => {
   const [employeeAmount, setAmployeeAmount] = useState("30");
   const [inputWidth, setInputWidth] = useState(0);
   const progress = Math.ceil(((employeeAmount - 10) / 100) * 100 * 1.1);
@@ -31,7 +31,10 @@ const Slider = () => {
           min="10"
           max="100"
           value={employeeAmount}
-          onChange={(e) => setAmployeeAmount(e.target.value)}
+          onChange={(e) => {
+            setAmployeeAmount(e.target.value);
+            outSetEmployeeAmount(e.target.value);
+          }}
           ref={inputRef}
           style={{
             backgroundImage: `linear-gradient(to right,#4C71F1 ${progress}%,#DEEDFF ${progress}%)`,
