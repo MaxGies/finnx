@@ -19,3 +19,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+
+## Assignment 
+
+Figma : https://www.figma.com/file/DQ3h0cA0Uq5D6o9U92Jfmo/FINNX-%3A-Assignment-(Copy)?type=design&node-id=507%3A75&mode=design&t=OZkAffNF1mWdo5jR-1
+
+![image](https://github.com/MaxGies/finnx/assets/32586244/ed270919-9c82-4ef9-9f91-a1a1a93032fd)
